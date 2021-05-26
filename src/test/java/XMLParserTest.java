@@ -9,14 +9,13 @@ class XMLParserTest {
     final String PATH = "src/main/resources/eurofxref-daily.xml";
 
     @Test
-    void returnedMapShouldContains33Pairs() throws IOException {
+    void returnedMapShouldContains32Pairs() throws IOException {
         int size = XMLParser.getCurrencyRates(PATH).size();
-        assertEquals(33, size);
+        assertEquals(32, size);
     }
 
     @Test
-    void wrongPathShouldThrowAFileNotFoundException() throws IOException {
-
+    void wrongPathShouldThrowAFileNotFoundException() {
         assertThrows(FileNotFoundException.class, () -> { XMLParser.getCurrencyRates("src/wrong/path.xml"); });
     }
 }

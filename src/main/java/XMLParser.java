@@ -13,10 +13,8 @@ import java.util.HashMap;
  * @author Dawid Zaorski
  */
 class XMLParser {
-    static HashMap<String, Double> currencyRates = new HashMap<>();
-
     static HashMap<String, Double> getCurrencyRates(String path) throws IOException {
-        currencyRates.put("EUR", 1.0);
+        HashMap<String, Double> currencyRates = new HashMap<>();
 
         File file = new File(path);
         FileInputStream fis = new FileInputStream(file);
